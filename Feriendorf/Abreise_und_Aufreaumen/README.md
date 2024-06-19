@@ -17,6 +17,10 @@ Hier befinden sich die Putzpläne, die am Tag vor der Abreise ausgehängt werden
 - GBH-Häuser: [LuaLaTeX-Datei](sa21-putzplan-goldbornhof.tex) [PDF-Datei](sa21-putzplan-goldbornhof.pdf)
 - Speisesaal: [LuaLaTeX-Datei](sa21-putzplan-speisesaal.tex) [PDF-Datei](sa21-putzplan-speisesaal.pdf)
 
+## PfingstAkademie 2019
+- In Häusern: [LuaLaTeX-Datei](pa19-hausputzenlua.tex) [PDF-Datei](pa19-hausputzenlua.pdf) [PDF-Datei ohne Logo](pa19-hausputzenlua_ohnelogo.pdf)
+- Im Speisesaal: [LuaLaTeX-Datei](pa19-speisesaalputzenlua.tex) [PDF-Datei](pa19-speisesaalputzenlua.pdf) [PDF-Datei ohne Logo](pa19-speisesaalputzenlua_ohnelogo.pdf)
+
 ## SommerAkademie 2018
 - [Putzplan 1](sa18-putzplan-1.jpg) [Putzplan 2](sa18-putzplan-2.jpg) [Putzplan 3](sa18-putzplan-3.jpg)
 
@@ -25,7 +29,7 @@ Hier befinden sich die Putzpläne, die am Tag vor der Abreise ausgehängt werden
 - Im Speisesaal: [PDF-Datei](pa17-putzplan_speisesaal.pdf)
 
 ## PfingstAkademie 2014
-- In Häusern: [PDF-Datei](pa14-putzplan_haus.pdf)
+- In Häusern: [PDF-Datei](putzaushang_roh.pdf)
 
 ## SommerAkademie 2013
 - In Häusern: [ODT-Dokument](aufraeumen_checkliste.odt)
