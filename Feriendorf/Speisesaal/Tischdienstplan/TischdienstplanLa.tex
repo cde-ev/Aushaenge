@@ -1,0 +1,77 @@
+\documentclass{scrartcl}
+
+
+\usepackage[german]{babel}
+
+\usepackage{scrlayer-scrpage}
+\usepackage{graphicx}
+\usepackage[table]{xcolor}
+\usepackage{tikz}
+\usepackage{microtype}
+\usepackage{calc}
+\usepackage{geometry}
+\usepackage[
+    colorlinks=True,
+    urlcolor=black!70!white,
+    pdfauthor={PfingstAka19-Orgas},
+    unicode
+]{hyperref}
+
+% Load Fonts and define colors
+\usepackage{libertine}
+\definecolor{design}{HTML}{2f2f2f}
+\definecolor{design2}{HTML}{3f3f3f}
+
+% Style definitions
+\setlength\intextsep{0pt}
+\addtokomafont{disposition}{\rmfamily}
+
+\usepackage{expl3}
+\usepackage{tabularx}
+\usepackage{xparse}
+
+\KOMAoptions{pagesize,paper=landscape,DIV=12}
+
+\ExplSyntaxOn
+\NewDocumentCommand\plaene{m}{
+\clist_map_inline:nn {#1}{\plan{##1}}
+}
+\ExplSyntaxOff
+
+
+\NewDocumentCommand\plan{m}{
+~
+\vfill
+\begin{tikzpicture}[overlay]
+\node[anchor=south east,xshift=1.05\textwidth,yshift=-.05\textheight] {\includegraphics[width=.18\textwidth]{PA19_logo2_grey.pdf}};
+\end{tikzpicture}
+\begin{center}
+\Huge Tischdienstplan #1
+\end{center}
+\bigskip
+\Large \renewcommand{\arraystretch}{2.3}
+\begin{tabularx}{\textwidth}{|l|X|X|X|X|} %Ja ich weiss die Zeilen sind vertikal nicht zentriert -- mag mich nicht
+\hline
+& \textbf{Freitag} & \textbf{Samstag} & \textbf{Sonntag} & \textbf{Montag} \\ \hline
+Morgens & 				& Haus 2 + EZ  		& Haus 1 + DZ EG & Haus 4 + Aquarium\\  \hline
+Mittags & 				& Haus 3 + DZ OG		& Haus 2 + EZ 	& \\ \hline
+Abends & Haus 1 + DZ EG	& Haus 4 + Aquarium & Haus 3 + DZ OG & \\ \hline
+\end{tabularx}
+\vfill
+\small
+\noindent \textbf{Aufgabe des Tischdienstes:}
+
+\noindent \begin{tabularx}{\textwidth}{lX}
+Morgens:& Essen in die K\"uche bringen und von allem etwas auf den Tresen stellen, Geschirr auf Tresen stellen, danach Essen wieder hinausbringen; Sp\"ulmaschine anschalten und leeren; M\"ull rausbringen \\ 
+Mittags: &Essen in die K\"uche bringen und von allem etwas auf den Tresen stellenen, Vorlegbesteck bereitlegen, Geschirr auf Tresen stellen; Sp\"ulmaschine anschalten und leeren; M\"ull rausbringen \\ 
+Abends: &Essen in die K\"uche bringen und von allem etwas auf den Tresen stellen, danach Essen wieder hinausbringen; Sp\"ulmaschine anschalten und leeren; M\"ull rausbringen \\ 
+\end{tabularx}
+\clearpage
+}
+
+\pagestyle{empty}
+
+\begin{document}
+\plaene{Lischerthof, Fichtenhof, L\"oscherhof, Buchwaldhof, Steinsgebi\ss hof}
+
+\end{document}

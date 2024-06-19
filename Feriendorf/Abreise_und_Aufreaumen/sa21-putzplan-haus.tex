@@ -1,0 +1,102 @@
+% Compile with LuaLaTeX!
+%
+\documentclass[14pt,parskip=full+]{scrartcl}
+
+% LaTeX packages
+%\usepackage{fontspec}
+\usepackage[ngerman]{babel}
+\usepackage{graphics}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\setlist{noitemsep}
+\usepackage{scrlayer-scrpage}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage[table]{xcolor}
+\usepackage{colortbl}
+\usepackage{microtype}
+\usepackage{calc}
+\usepackage{geometry}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage[
+    colorlinks=True,
+    urlcolor=black!70!white,
+    pdfauthor={PfingstAka19-Orgas},
+    unicode
+]{hyperref}
+
+% Load Fonts and define colors
+\usepackage{libertine}
+\definecolor{design}{HTML}{2f2f2f}
+\definecolor{design2}{HTML}{3f3f3f}
+
+% Style definitions
+\setlength\intextsep{0pt}
+\addtokomafont{disposition}{\rmfamily}
+\arrayrulecolor{design2}
+\geometry{top=1.27cm,bottom=1.27cm,left=1.27cm,right=1.27cm}
+\newcommand{\head}[1]{\textcolor{white}{\textbf{#1}}}
+\ihead[]{}
+\cfoot[]{}
+\ifoot[]{Offizieller Hinweis der Orgas}
+\ofoot[]{}
+
+\makeatletter
+\newcommand{\gettikzxy}[3]{%
+  \tikz@scan@one@point\pgfutil@firstofone#1\relax
+  \edef#2{\the\pgf@x}%
+  \edef#3{\the\pgf@y}%
+}
+\makeatother
+
+\newcommand{\checkfield}{~ \hfill ~\raisebox{-5pt}{\tikz\node[draw,minimum width=16.8pt,minimum height=16.8pt]{};}}
+\newcommand{\countfield}{~ \hfill ~\raisebox{-5pt}{\tikz\node[draw,minimum width=33.6pt,minimum height=16.8pt]{};}}
+\newcommand{\pfeil}{~\ensuremath{\rightarrow}~}
+\newcommand{\mysection}[1]{\vspace{-.7\baselineskip}\subsubsection*{#1} \vspace{-.7\baselineskip}}
+
+\begin{document}
+\parbox[t]{.8\textwidth}{\vskip0pt
+\section*{H\"auser aufr\"aumen -- wie gehts?}
+\subsection*{Frist: 9:45 Uhr!}
+}
+
+\bigskip
+
+\def\arraystretch{1.3}
+
+\mysection{Bitte stapeln und abhaken:}
+\begin{tabularx}{\textwidth}{Xc}
+Matratzen \pfeil eine aufs untere Stockbett, der Rest oben stapeln & \checkfield \\
+Bettdecken \pfeil unten in das Stockbett stapeln & \checkfield \\
+Kissen \pfeil unten in das Stockbett & \checkfield
+\end{tabularx}
+
+
+\mysection{Bitte z\"ahlen:}
+\begin{tabularx}{\textwidth}{Xc}
+Anzahl Matratzen (hoffentlich 13) & \countfield \\
+Anzahl Bettdecken (13 sind ideal\footnote{\"Ubersch\"ussige Decken und Kissen bitte in den Speisesaal}) & \countfield \\
+Anzahl Kissen (13 sind ideal\footnotemark[1]) & \countfield \\
+Anzahl St\"uhle (7 sind ideal) & \countfield
+\end{tabularx}
+
+\mysection{Bitte aufr\"aumen und saubermachen:}
+ \begin{tabularx}{\textwidth}{Xc}
+ Bettw\"asche \pfeil in den Wagen im Hof & \checkfield \\
+ Gep\"ack \pfeil auf dem Hof sammeln & \checkfield \\
+ M\"ulleimer \pfeil Tonnen neben Speisesaal trennen (vorne, Bad, Hygiene) & \checkfield\checkfield\checkfield \hspace*{-19px}\\
+ Haus von oben nach unten kehren\footnote{Gro\ss e Besen sind im Speisesaal, Handbesen und Schaufel im Bad} & \checkfield \\
+ Schr\"anke leer? \pfeil Falls sich kein Besitzer findet, zur Fundsachenkiste am Orgabüro & \checkfield
+ \end{tabularx}
+ 
+\mysection{Sobald euer Haus fertig ist}
+\begin{tabularx}{\textwidth}{X}
+  Speisesaal \& Hof aufräumen \\
+  Aufenthaltsraum Pelikanhalle aufräumen \\
+\end{tabularx}
+
+\subsection*{Und jetzt\footnote{Plenum ist um 10:00 Uhr} zum Plenum!}
+
+\end{document}

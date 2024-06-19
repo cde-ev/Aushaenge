@@ -1,0 +1,106 @@
+% !TeX program = lualatex
+\documentclass[a4paper,parskip=half]{scrartcl}
+
+\usepackage{fontspec}
+\usepackage[german]{babel}
+
+\usepackage{scrlayer-scrpage}
+\usepackage{graphicx}
+\usepackage[table]{xcolor}
+\usepackage{colortbl}
+\usepackage{microtype}
+\usepackage{calc}
+\usepackage{tikz}
+%\usepackage{geometry}
+
+% Load Fonts
+\usepackage{libertine}
+
+% Style definitions
+\setlength\intextsep{0pt}
+\addtokomafont{disposition}{\rmfamily}
+
+\usepackage{expl3}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{xparse}
+
+\KOMAoptions{pagesize,paper=landscape,DIV=14}
+
+\pagestyle{empty}
+
+\begin{document}
+
+% \begin{tikzpicture}[overlay]
+%     \node[anchor=south east,xshift=1.05\textwidth,yshift=-.05\textheight] {\includegraphics[width=.18\textwidth]{PA19_logo2_grey.pdf}};
+% \end{tikzpicture}
+\vfill
+
+\begin{center}
+    \Huge Küchendienstplan
+\end{center}
+\bigskip
+\Large \renewcommand{\arraystretch}{2.3}
+\begin{tabularx}{\textwidth}{|l|X|X|X|X|}
+\hline
+        & \textbf{Freitag} & \textbf{Samstag}       & \textbf{Sonntag}   & \textbf{Montag} \\ \hline
+Morgens &                  & Haus 2 + EZ Haus 5     & Haus 1 + DZ EG     & Haus 4 + EZ Speisesaal\\  \hline
+Mittags &                  & Haus 3 + DZ OG         & Haus 2 + EZ Haus 5 & \\ \hline
+Abends  & Haus 1 + DZ EG   & Haus 4 + EZ Speisesaal & Haus 3 + DZ OG     & \\ \hline
+\end{tabularx}
+\vfill
+
+
+\newpage
+
+\textbf{Aufgaben des Küchendienstes:}
+
+\small
+\renewcommand{\arraystretch}{1}
+\begin{tabularx}{\textwidth}{l||p{0.3\textwidth}|X}
+    & \textbf{Vor dem Essen} & \textbf{Nach dem Essen} \\
+    \hline
+    \hline
+    \newline\textbf{Morgens}&%
+        \begin{itemize}
+            \item Essens-Kisten von draußen in die Küche bringen (auf den niedrigen Tisch stellen)
+            \item Essen aus dem Kühlschrank und den Containern auf den Tresen stellen, Geschirr auf Tresen stellen
+        \end{itemize}&%
+        \begin{itemize}
+            \item Sicherstellen, dass die Tische gewischt sind
+            \item Übriges Essen in Plastikboxen packen und in den Kühlschrank räumen (alles muss in Dosen oder abgedeckt sein)
+            \item Leere Essens-Kisten (inkl. Deckel)
+            \item Schweine-Eimer rausstellen
+            \item Spülmaschine (mehrfach) einräumen, einschalten und ausräumen (läuft ca. 12 Min.)
+            \item Müll in die großen Tonnen draußen entsorgen
+        \end{itemize}\\
+    \hline
+    \newline\textbf{Mittags} &
+        \begin{itemize}
+            \item Essens-Container von draußen in die Küche bringen (auf den niedrigen Tisch stellen)
+            \item Von jedem (!) Gericht etwas auf den Tresen stellen, Geschirr auf Tresen stellen
+            \item Markierungen anbringen, welches Essen für welche Gruppe (carnivor, vegetarisch, vegan) vorgesehen ist (vgl. Speiseplan)
+        \end{itemize} &
+        \begin{itemize}
+            \item Sicherstellen, dass die Tische gewischt sind
+            \item Essens-Container wieder rausstellen
+			\item Reste des kalten Nachtischs im Kühlschrank eingelagern
+			\item Tee-/Kaffee-Thermobehälter rausstellen (falls noch da)
+            \item Schweine-Eimer rausstellen
+            \item Leere Getränke-Kästen rausstellen
+            \item Spülmaschine (mehrfach) einräumen, einschalten und ausräumen (läuft ca. 12 Min.)
+            \item Müll in die großen Tonnen draußen entsorgen
+        \end{itemize} \\
+    \hline
+	\newline\textbf{Abends} &
+        \begin{itemize}
+            \item Essen aus dem Kühlschrank auf den Tresen stellen, Geschirr auf Tresen stellen
+        \end{itemize} &
+        \begin{itemize}
+            \item Sicherstellen, dass die Tische gewischt sind
+            \item Übriges Essen in Plastikboxen packen und in den Kühlschrank räumen (alles muss in Dosen oder abgedeckt sein)
+            \item Spülmaschine (mehrfach) einräumen, einschalten und ausräumen (läuft ca. 12 Min.)
+            \item Müll in die großen Tonnen draußen entsorgen
+        \end{itemize} \\
+\end{tabularx}
+\end{document}

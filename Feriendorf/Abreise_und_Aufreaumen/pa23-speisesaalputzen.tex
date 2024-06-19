@@ -1,0 +1,125 @@
+% Compile with LuaLaTeX!
+%
+\documentclass[14pt,parskip=full+]{scrartcl}
+
+% LaTeX packages
+%\usepackage{fontspec}
+\usepackage[ngerman]{babel}
+\usepackage{graphics}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\setlist{noitemsep}
+\usepackage{scrlayer-scrpage}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage[table]{xcolor}
+\usepackage{colortbl}
+\usepackage{microtype}
+\usepackage{calc}
+\usepackage{geometry}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usepackage{ulem}
+\usetikzlibrary{calc}
+\usepackage[
+    colorlinks=True,
+    urlcolor=black!70!white,
+    pdfauthor={PfingstAka19-Orgas},
+    unicode
+]{hyperref}
+
+% Load Fonts and define colors
+\usepackage{libertine}
+\definecolor{design}{HTML}{2f2f2f}
+\definecolor{design2}{HTML}{3f3f3f}
+
+% Style definitions
+\setlength\intextsep{0pt}
+\addtokomafont{disposition}{\rmfamily}
+\arrayrulecolor{design2}
+\geometry{top=1.27cm,bottom=1.27cm,left=1.27cm,right=1.27cm}
+\newcommand{\head}[1]{\textcolor{white}{\textbf{#1}}}
+\ihead[]{}
+\cfoot[]{}
+\ifoot[]{Offizieller Hinweis der Orgas}
+\ofoot[]{}
+
+\makeatletter
+\newcommand{\gettikzxy}[3]{%
+  \tikz@scan@one@point\pgfutil@firstofone#1\relax
+  \edef#2{\the\pgf@x}%
+  \edef#3{\the\pgf@y}%
+}
+\makeatother
+
+\newcommand{\checkfield}{~ \hfill ~\raisebox{-5pt}{\tikz\node[draw,minimum width=16.8pt,minimum height=16.8pt]{};}}
+\newcommand{\countfield}{~ \hfill ~\raisebox{-5pt}{\tikz\node[draw,minimum width=33.6pt,minimum height=16.8pt]{};}}
+\newcommand{\pfeil}{~\ensuremath{\rightarrow}~}
+\newcommand{\mysection}[1]{\vspace{-.7\baselineskip}\subsubsection*{#1} \vspace{-.7\baselineskip}}
+
+\begin{document}
+
+\parbox[t]{.8\textwidth}{\vskip0pt
+\section*{Speisesaal aufräumen -- wie gehts?}
+\subsection*{Sehr harte\footnotemark~ Frist: 9:50 Uhr!}
+}
+\footnotetext{wirklich hart!}
+%\parbox[t]{.2\textwidth}{\vskip0pt 
+%\includegraphics[width=.18\textwidth]{PA19_logo2_grey.pdf}}% TODO adapt path to logo
+
+\bigskip
+
+\def\arraystretch{1.3}
+
+\begin{tabularx}{\textwidth}{Xc}
+ Kehren & \checkfield \\
+ Kiosk-Inhalte zum Kiosk des CdErnhofs bringen & \checkfield \\
+ Tische und Tresen abwischen & \checkfield \\
+ Herrenlose geöffnete Flaschen ausleeren falls notwendig & \checkfield \\
+ Leere Flaschen in Getränkekästen sortieren & \checkfield \\
+ Getränkekästen rausstellen & \checkfield \\
+ Tische in langen Tafeln anordnen, Stühle an der hinteren Wand stapeln (vgl. Bild des Feriendorfs)& \checkfield
+\end{tabularx}
+\mysection{Küche}
+\begin{tabularx}{\textwidth}{Xc}
+ \uline{Alles} Geschirr spülen (bzw. Spülmaschine befüllen und ausräumen) und sortieren & \checkfield \\ 
+ Sortiertes Geschirr auf den Tresen stellen & \checkfield \\
+ Mülleimer leeren (in die Tonnen vor dem Gebäude) & \checkfield \\
+\end{tabularx}
+
+
+
+
+\vspace{2cm}
+
+
+
+
+\parbox[t]{.8\textwidth}{\vskip0pt
+\section*{Allgemeines Aufräumen -- wie gehts?}
+%\subsection*{Sehr harte\footnotemark~ Frist: 9:50 Uhr!}
+}
+%\footnotetext{wirklich hart!}
+\parbox[t]{.2\textwidth}{\vskip0pt 
+%\includegraphics[width=.18\textwidth]{PA19_logo2_grey.pdf}% TODO adapt path to logo
+}
+
+%\bigskip
+
+\def\arraystretch{1.3}
+
+\begin{tabularx}{\textwidth}{Xc}
+ Herumliegende Gegenstände zur Fundsachenkiste am Orgabüro & \checkfield \\
+ Herumstehende und (per Definition\footnote{leer sind angebrochene Flaschen ohne Inhalt oder ohne Beschriftung/Namen}) leere Flaschen in die Kästen räumen & \checkfield \\
+ Beschriebenes Papier und anderen Müll in die Mülltonnen werfen & \checkfield \\
+ Stifte, leeres Papier, Klebeband, etc. zum Orgabüro bringen & \checkfield \\
+\end{tabularx}
+
+\subsection*{Mehr Hilfe für die Orgas}
+\begin{tabularx}{\textwidth}{X}
+ Lichterketten an den Wegen vorsichtig aufwickeln und zum Orgabüro bringen \\
+ Zettel von Fenstern, Wänden, etc. abhängen und in den Papiermüll werfen \\
+\end{tabularx}
+
+
+\end{document}

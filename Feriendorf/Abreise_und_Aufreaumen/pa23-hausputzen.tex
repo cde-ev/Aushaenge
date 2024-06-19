@@ -1,0 +1,105 @@
+% Compile with LuaLaTeX!
+%
+\documentclass[14pt,parskip=full+]{scrartcl}
+
+% LaTeX packages
+%\usepackage{fontspec}
+\usepackage[ngerman]{babel}
+\usepackage{graphics}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\setlist{noitemsep}
+\usepackage{scrlayer-scrpage}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage[table]{xcolor}
+\usepackage{colortbl}
+\usepackage{microtype}
+\usepackage{calc}
+\usepackage{geometry}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage[
+    colorlinks=True,
+    urlcolor=black!70!white,
+    pdfauthor={PfingstAka19-Orgas},
+    unicode
+]{hyperref}
+
+% Load Fonts and define colors
+\usepackage{libertine}
+
+% Style definitions
+\setlength\intextsep{0pt}
+\addtokomafont{disposition}{\rmfamily}
+\arrayrulecolor{design2}
+\geometry{top=1.27cm,bottom=1.27cm,left=1.27cm,right=1.27cm}
+\newcommand{\head}[1]{\textcolor{white}{\textbf{#1}}}
+\ihead[]{}
+\cfoot[]{}
+\ifoot[]{Offizieller Hinweis der Orgas}
+\ofoot[]{}
+
+\makeatletter
+\newcommand{\gettikzxy}[3]{%
+  \tikz@scan@one@point\pgfutil@firstofone#1\relax
+  \edef#2{\the\pgf@x}%
+  \edef#3{\the\pgf@y}%
+}
+\makeatother
+
+\newcommand{\checkfield}{~ \hfill ~\raisebox{-5pt}{\tikz\node[draw,minimum width=16.8pt,minimum height=16.8pt]{};}}
+\newcommand{\countfield}{~ \hfill ~\raisebox{-5pt}{\tikz\node[draw,minimum width=33.6pt,minimum height=16.8pt]{};}}
+\newcommand{\pfeil}{~\ensuremath{\rightarrow}~}
+\newcommand{\mysection}[1]{\vspace{-.7\baselineskip}\subsubsection*{#1} \vspace{-.7\baselineskip}}
+
+\begin{document}
+
+\parbox[t]{.8\textwidth}{\vskip0pt
+\section*{Häuser aufräumen -- wie gehts?}
+\subsection*{Sehr harte\footnotemark~ Frist: 9:50 Uhr!}
+}
+\footnotetext{wirklich hart!}
+\parbox[t]{.2\textwidth}{\vskip0pt 
+%\includegraphics[width=.18\textwidth]{PA19_logo2_grey.pdf}% TODO adapt path to logo
+}
+
+\bigskip
+
+\def\arraystretch{1.3}
+
+\mysection{Bitte stapeln und abhaken:}
+\begin{tabularx}{\textwidth}{Xc}
+Matratzen \pfeil eine aufs untere Stockbett, der Rest oben stapeln & \checkfield \\
+Bettdecken \pfeil unten in das Stockbett stapeln & \checkfield \\
+Kissen \pfeil unten in das Stockbett & \checkfield
+\end{tabularx}
+
+
+\mysection{Bitte zählen:}
+\begin{tabularx}{\textwidth}{Xc}
+Anzahl Matratzen (hoffentlich 13) & \countfield \\
+Anzahl Bettdecken (13 sind ideal\footnote{überschüssige Decken und Kissen bitte ins Orgabüro, ebenso ausgeliehene Isomatten}) & \countfield \\
+Anzahl Kissen (13 sind ideal\footnotemark[2]) & \countfield \\
+Anzahl Stühle (7 sind ideal\footnote{Bei Bedarf überschüssige Stühle auf dem Hof verteilen oder holen}) & \countfield
+\end{tabularx}
+
+\mysection{Bitte aufräumen und saubermachen:}
+\begin{tabularx}{\textwidth}{Xc}
+Bettwäsche \pfeil in den Wagen im Hof & \checkfield \\
+Gepäck \pfeil zur Pelikanhalle & \checkfield \\
+Mülleimer \pfeil Müll in Tonnen neben Speisesaal trennen & \checkfield \\
+Haus von oben nach unten kehren\footnote{Große Besen sind im Speisesaal, Handbesen und Schaufel im Bad} & \checkfield \\
+Schränke leer? \pfeil Falls sich kein Besitzer findet, zur Fundsachenkiste am Orgabüro & \checkfield
+\end{tabularx}
+ 
+\textbf{Parallel: Hof \& Speisesaal aufräumen}
+
+(siehe Zettel an Speisesaaltür)
+
+\subsection*{Und jetzt zum Plenum!}
+\vspace{-\baselineskip}
+(Gepäck mitnehmen!)
+
+\end{document}
